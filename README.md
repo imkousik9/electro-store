@@ -33,7 +33,7 @@ git clone https://github.com/imkousik9/electro-store.git
 cd into the directory
 
 ```bash
-cd tour-app
+cd electro-store
 ```
 
 install all the dependencies
