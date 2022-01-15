@@ -7,6 +7,7 @@ import { authUser } from './features/authentication/authenticationSlice';
 import { getUserAddresses } from './features/address/addressSlice';
 import { getCart } from './features/cart/cartSlice';
 import { getOrders } from './features/order/ordersSlice';
+import { getProducts } from './features/product/productsSlice';
 
 import Login from './features/authentication/Login';
 import SingUp from './features/authentication/SingUp';
@@ -29,6 +30,7 @@ function App() {
     dispatch(authUser());
     dispatch(getWishlist());
     dispatch(getCart());
+    dispatch(getProducts());
     dispatch(getUserAddresses());
     dispatch(getOrders());
   }, []);
