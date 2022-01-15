@@ -7,7 +7,7 @@
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/imkousik9)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e3bdd8b4-06ab-456e-bd95-5e92a6ed88b8/deploy-status)](https://app.netlify.com/sites/electro-store-km/deploys)
 
-Electro store is a E-commerce Application for electronics Products with Reactjs and Expressjs
+Electro store is a E-commerce Application for electronics Products made with Reactjs and Expressjs
 
 # Application Links
 
