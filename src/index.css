@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slick-arrow {
+  @apply z-20;
+}
+.slick-arrow.slick-prev {
+  @apply left-[1px] top-[43%];
+}
+
+.slick-arrow.slick-next {
+  @apply right-10 top-[43%];
+}
+
+.slick-arrow.slick-prev:before,
+.slick-arrow.slick-next:before {
+  @apply text-6xl text-indigo-700;
+}
+
+button.slick-prev.slick-disabled:before,
+button.slick-next.slick-disabled:before {
+  @apply hidden;
+}
