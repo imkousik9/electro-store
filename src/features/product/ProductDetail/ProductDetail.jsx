@@ -10,7 +10,6 @@ import {
 } from '../../../lib';
 import { addToWishlist, useWishlist } from '../../wishlist/wishlistSlice';
 import { useAuthentication } from '../../authentication/authenticationSlice';
-import { addToCart } from '../../cart/cartSlice';
 
 import { ShoppingCartIcon, StarIcon } from '@heroicons/react/solid';
 import {
@@ -38,10 +37,6 @@ function ProductDetail() {
 
   const addProductTOWishlist = (id) => {
     auth?.token ? dispatch(addToWishlist(id)) : navigate('/login');
-  };
-
-  const addProductTOCart = (id) => {
-    auth?.token ? dispatch(addToCart(id)) : navigate('/login');
   };
 
   let isRendered = useRef(false);

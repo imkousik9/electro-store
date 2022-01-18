@@ -14,7 +14,10 @@ function ProductList() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    dispatch(getProducts());
+
+    if (!products?.products) {
+      dispatch(getProducts());
+    }
   }, []);
 
   const sortedData = getSortedData(products, products?.products);

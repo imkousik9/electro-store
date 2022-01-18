@@ -6,12 +6,14 @@ import OrderCard from './OrderCard';
 import Spinner from '../../Spinner';
 
 function Orders() {
-  const { orders, status } = useOrders();
+  const { orders, orderId, status } = useOrders();
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getOrders());
+    if (!orders || orderId) {
+      dispatch(getOrders());
+    }
   }, []);
 
   return (

@@ -85,6 +85,7 @@ export const getUserAddresses = createAsyncThunk(
 );
 
 const initialState = {
+  status: 'loading',
   addressDetails: null
 };
 
@@ -95,9 +96,11 @@ export const addressSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getUserAddresses.fulfilled, (state, action) => {
+        state.status = 'succeeded';
         state.addressDetails = action.payload;
       })
       .addCase(getUserAddresses.rejected, (state, action) => {
+        state.status = 'failed';
         state.error = action.payload;
       })
       .addCase(createNewAddress.fulfilled, (state, action) => {

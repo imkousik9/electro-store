@@ -21,7 +21,7 @@ function Login() {
     const dispatchResponse = await dispatch(login({ email, password }));
 
     if (dispatchResponse.payload?.token) {
-      dispatch(getWishlist(dispatchResponse.payload?.token));
+      dispatch(getWishlist());
       dispatch(getCart());
       navigate(state?.from ? state.from : '/');
     }

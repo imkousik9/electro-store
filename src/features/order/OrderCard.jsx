@@ -12,15 +12,7 @@ function OrderCard({ order }) {
           </span>
         </h6>
         <p className="text-sm">Order# {order?._id}</p>
-        <p className="text-sm">
-          Total: ₹{order?.payment.totalPaid}{' '}
-          <button
-            onClick={() => setPaymentDetails(true)}
-            className="text-indigo-700 text-xs"
-          >
-            View Breakup
-          </button>
-        </p>
+        <p className="text-sm">Total: ₹{order?.payment.totalPaid} </p>
 
         <p className="text-sm">
           Deliver to: <span>{order?.address}</span>
